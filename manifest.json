@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Url convert to QR image",
+  "description": "将浏览器地址栏的url转换为二维码",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "点击生成二维码"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
