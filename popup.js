@@ -51,15 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
     // Put the image URL in Google search.
 
-      var imageResult = document.getElementById('image-result');
-      // Explicitly set the width/height to minimize the number of reflows. For
-      // a single image, this does not matter, but if you're going to embed
-      // multiple external images in your page, then the absence of width/height
-      // attributes causes the popup to resize multiple times.
-      var imageUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + url;
-      imageResult.width = 150;
-      imageResult.height = 150;
-      imageResult.src = imageUrl;
-      imageResult.hidden = false;
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 150,
+        height : 150
+      });
+
+      qrcode.makeCode(url);
   });
 });

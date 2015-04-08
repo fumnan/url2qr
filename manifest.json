@@ -3,13 +3,20 @@
 
   "name": "Url convert to QR image",
   "description": "将浏览器地址栏的url转换为二维码",
-  "version": "0.1",
+  "version": "0.2",
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "logo19.png",
     "default_popup": "popup.html",
     "default_title": "点击生成二维码"
   },
+
+  "icons": { 
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png" 
+  },
+
   "permissions": [
     "activeTab"
   ]
